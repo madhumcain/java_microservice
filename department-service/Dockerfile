@@ -1,5 +1,4 @@
 FROM openjdk:11
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} department-service.jar
+ADD target/department-service.jar department-service.jar
 ENTRYPOINT ["java","-jar","/department-service.jar"]
 EXPOSE 9001
